@@ -131,7 +131,7 @@ namespace SportsStore
                 routes.MapSpaFallbackRoute("angular-fallback", new { controller = "Home", action = "Index" });
             });
 
-            if ((Configuration["INITDB"] ?? "false") == "true")
+            if ((Configuration["INITDB"] ?? "false") == "True")
             {
                 System.Console.WriteLine("Preparing Database...");
                 SeedData.SeedDatabase(app.ApplicationServices.GetRequiredService<DataContext>());
