@@ -48,13 +48,13 @@ namespace SportsStore
                 opts.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
             });
 
-            services.AddDistributedSqlServerCache(options =>
-            {
-                options.ConnectionString =
-                Configuration["Data:Products:ConnectionString"];
-                options.SchemaName = "dbo";
-                options.TableName = "SessionData";
-            });
+            //services.AddDistributedSqlServerCache(options =>
+            //{
+            //    options.ConnectionString =
+            //    Configuration["Data:Products:ConnectionString"];
+            //    options.SchemaName = "dbo";
+            //    options.TableName = "SessionData";
+            //});
             services.AddSession(options =>
             {
                 options.CookieName = "SportsStore.Session";
